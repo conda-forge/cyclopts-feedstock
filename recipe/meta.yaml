@@ -26,6 +26,7 @@ requirements:
     - attrs >=23.1.0
     - rich >=13.6.0
     - docstring_parser >=0.15.0,<0.16.0
+    - importlib-metadata >=4.4
 
 test:
   imports:
