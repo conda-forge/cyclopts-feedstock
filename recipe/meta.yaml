@@ -1,5 +1,5 @@
 {% set name = "cyclopts" %}
-{% set version = "2.1.2" %}
+{% set version = "2.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/cyclopts-{{ version }}.tar.gz
-  sha256: 8f193c8815f221b78cb74fafa5f74b404f8527d220c5c148060c1927ba4b1e02
+  sha256: 1c942e96fd0b238d8c2e17104ab78051cc750d401341c0272df1050d15f37a59
 
 build:
   noarch: python
@@ -25,6 +25,7 @@ requirements:
     - typing-extensions >=4.8.0
     - attrs >=23.1.0
     - rich >=13.6.0
+    - rich-rst >=1.2.0,<2.0.0
     - docstring_parser >=0.15.0,<0.16.0
     - importlib-metadata >=4.4
 
