@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/cyclopts-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/cyclopts-{{ version }}.tar.gz
   sha256: 603389e7bb28e54828e2a30c300158db3e1bf0666065d0ba5f1c0dfa7d1eb5f8
 
 build:
@@ -16,12 +16,12 @@ build:
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - poetry-core >=1.0.0
     - poetry-dynamic-versioning >=1.0.1
     - pip
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - typing-extensions >=4.8.0
     - attrs >=23.1.0
     - rich >=13.6.0
@@ -36,6 +36,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/BrianPugh/cyclopts
