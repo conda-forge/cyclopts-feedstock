@@ -1,13 +1,13 @@
 {% set name = "cyclopts" %}
-{% set version = "2.9.9" %}
+{% set version = "3.0.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/cyclopts-{{ version }}.tar.gz
-  sha256: 11d7bb59be253329ff49a1b9a634676c7ae708605d4975090783b99d081c1a0b
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/cyclopts-{{ version }}.tar.gz
+  sha256: 603389e7bb28e54828e2a30c300158db3e1bf0666065d0ba5f1c0dfa7d1eb5f8
 
 build:
   noarch: python
@@ -16,12 +16,12 @@ build:
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - poetry-core >=1.0.0
     - poetry-dynamic-versioning >=1.0.1
     - pip
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - typing-extensions >=4.8.0
     - attrs >=23.1.0
     - rich >=13.6.0
@@ -36,6 +36,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/BrianPugh/cyclopts
