@@ -1,5 +1,5 @@
 {% set name = "cyclopts" %}
-{% set version = "3.9.0" %}
+{% set version = "3.9.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/cyclopts-{{ version }}.tar.gz
-  sha256: 47f594c171fbab02612764432f4f2e36764e82d685fbfc5763a67490f97da113
+  sha256: b0692716f29eaf21ba98900dda3ce4ef490a0124b56da9f4cc93c72ba7ab125d
 
 build:
   noarch: python
