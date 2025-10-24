@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: cyclopts
-  version: "3.24.0"
+  version: "4.0.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/cyclopts-${{ version }}.tar.gz
-  sha256: de6964a041dfb3c57bf043b41e68c43548227a17de1bad246e3a0bfc5c4b7417
+  sha256: 0dae712085e91d32cc099ea3d78f305b0100a3998b1dec693be9feb0b1be101f
 
 build:
   number: 0
@@ -20,16 +20,17 @@ build:
 requirements:
   host:
     - python ${{ python_min }}.*
-    - poetry-core >=1.0.0
-    - poetry-dynamic-versioning >=1.0.1
+    - hatchling
+    - hatch-vcs
     - pip
   run:
     - python >=${{ python_min }}
-    - typing_extensions >=4.8.0
     - attrs >=23.1.0
     - rich >=13.6.0
+    - docstring_parser >=0.15,<4.0
     - rich-rst >=1.3.1,<2.0.0
-    - docstring_parser >=0.15
+    - typing_extensions >=4.8.0
+    - tomli >=2.0.0
 
 tests:
   - python:
