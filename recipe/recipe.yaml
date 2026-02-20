@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: cyclopts
-  version: "4.5.3"
+  version: "4.5.4"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/cyclopts-${{ version }}.tar.gz
-  sha256: 35fa70971204c450d9668646a6ca372eb5fa3070fbe8dd51c5b4b31e65198f2d
+  sha256: eed4d6c76d4391aa796d8fcaabd50e5aad7793261792beb19285f62c5c456c8b
 
 build:
   number: 0
