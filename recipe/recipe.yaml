@@ -37,7 +37,9 @@ tests:
       imports:
         - cyclopts
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
 
 about:
   summary: Intuitive, easy CLIs based on python type hints.
