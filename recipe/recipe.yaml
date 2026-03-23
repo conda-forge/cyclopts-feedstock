@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: cyclopts
-  version: "4.10.0"
+  version: "4.10.1"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/cyclopts-${{ version }}.tar.gz
-  sha256: 0ae04a53274e200ef3477c8b54de63b019bc6cd0162d75c718bf40c9c3fb5268
+  sha256: ad4e4bb90576412d32276b14a76f55d43353753d16217f2c3cd5bdceba7f15a0
 
 build:
   number: 0
@@ -37,7 +37,9 @@ tests:
       imports:
         - cyclopts
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
 
 about:
   summary: Intuitive, easy CLIs based on python type hints.
