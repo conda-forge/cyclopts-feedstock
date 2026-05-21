@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: cyclopts
-  version: "4.14.0"
+  version: "4.14.1"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/cyclopts-${{ version }}.tar.gz
-  sha256: 2cb3d619330fdc8ba0b5acece85618915078aeb56117d12b96e289a128783938
+  sha256: 5d01fc3a940a0e4e872a81ed533a10c1892b5baaa4121fe69528a2b8c17fc9d0
 
 build:
   number: 0
@@ -28,7 +28,7 @@ requirements:
     - attrs >=23.1.0
     - rich >=13.6.0
     - docstring_parser >=0.15,<4.0
-    - rich-rst >=1.3.1,<2.0.0
+    - rich-rst >=1.3.1,<3.0.0
     - typing_extensions >=4.8.0
     - tomli >=2.0.0
 
